@@ -45,7 +45,7 @@ function gradeQuiz(candidateAnswers) {
 
   grade = (grade / questions.length) * 100;
   
-  if(grade <= 80) {
+  if(grade < 80) {
     passOrFail = "FAILED";
   } else {
     passOrFail = "PASSED";
@@ -64,6 +64,7 @@ function runProgram() {
 }
 
 function buildOutput(grade){
+  console.clear()
   let output = "";
 
   output += `Candidate Name: ${candidateName} \n`;
